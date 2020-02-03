@@ -8,8 +8,9 @@ def index():
     Display the page that returns the index page and its data
     '''
 
+    title = 'Home - Welcome to the News Recap online'
     message = 'Welcome to News Recap'
-    return render_template('index.html',message = message)
+    return render_template('index.html',message = message, title = title)
 
 
 @app.route('/news/<news_id>')
