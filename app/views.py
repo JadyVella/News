@@ -14,3 +14,9 @@ def index():
 
 @app.route('/news/<news_id>')
 def movie(news_id):
+
+    '''
+    Display news page that displays the news details and its data
+    '''
+
+    return render_template('news.html',id = news_id)
