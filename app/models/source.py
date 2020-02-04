@@ -4,9 +4,10 @@ class Source:
     '''
 
 
-    def __init__(self,id,name,description,language,country):
+    def __init__(self,id,name,title,language,country,description):
         self.id = id
         self.name = name
-        self.description = description
+        self.title = title
         self.language = language
         self.country = country
+        self.description = description
