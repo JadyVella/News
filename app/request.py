@@ -24,19 +24,19 @@ def get_sources(category):
         get_sources_response = json.loads(get_sources_data)
 
 
-        source_result = None
+        source_results = None
 
 
-        if get_sources_response['results']:
-            source_results_list = get_sources_response['results']
-            source_result = process_results(source_results_list)
+        if get_sources_response['sources']:
+            source_results_list = get_sources_response['sources']
+            source_results = process_sources(source_results_list)
 
 
-    return source_result
+    return source_results
 
 
 
-def process_results(source_list):
+def process_sources(source_list):
     '''
     Function that processes the source result and transform them to a list of Objects
     '''
@@ -45,12 +45,13 @@ def process_results(source_list):
     for source_item in source_list:
         id = source_item.get('id')
         name = source_item.get('name')
-        description = source_item.get('description')
+        title = source_item.get('title')
         language = source_item.get('language')
         country = source_item.get('country')
+        description = source_item.get('description')
 
 
-        source_object = Source(id,name,description,language,country)
+        source_object = Source(id,name,title,language,country,description)
         source_results.append(source_object)
 
 
@@ -58,16 +59,25 @@ def process_results(source_list):
 
 
 
-def get_source(id):
-    get_source_details_url = base_url.format(id,api_key)
+def get_article(id):
+    get_article_details_url = base_url.format(id,api_key)
 
-    with urllib.request.urlopen(get_source_details_url) as url:
-        source_details_data = url.read()
-        source_details_response = json.loads(source_details_data)
+    with urllib.request.urlopen(get_article_details_url) as url:
+        article_details_data = url.read()
+        article_details_response = json.loads(article_details_data)
 
-        source_object = None
-        if source_details_response:
-            id = source_details_response.get('id')
-            
+        article_object = None
+        if article_details_response:
+            id = article_details_response.get('id')
+            author = article_details_response.get('author')
+            url = article_details_response.get('url')
+            image = article_details_response.get('urlToImage')
+            date = article_details_response.get('publishedAt')
+            content = article_details_response.get('content')
+
+            article_object(self,id,author,url,image,date,content)
+
+    return article_object
+
 
 
