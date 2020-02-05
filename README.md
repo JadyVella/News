@@ -14,8 +14,8 @@ THEN: They should see various news sources on the homepage of the application, t
 
 
 THIS APPLICATION SHOULD ENABLE ONE TO:
-	*See various news sources on the homepage of the application
-	*Select a news source and see all news article from the selected news source in the application
-	*See the image, description and the time a news article was created
-	*Click an article and read the full article on the source website.
+* See various news sources on the homepage of the application
+* Select a news source and see all news article from the selected news source in the application
+* See the image, description and the time a news article was created
+* Click an article and read the full article on the source website.
 
