@@ -35,4 +35,7 @@ To view this project, follow this link https://jadyvella.github.io/News/
 * cell No.: +254792231660
 * Facebook: Jady Vella
 
+# License & Copyright
+- Licensed under [MIT LICENCE](LICENCE)
+Copyright (c) 2020 **Felix Ouma**
 
