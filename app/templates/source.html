@@ -1,0 +1,54 @@
+{%   extends 'base.html'%}
+{% block content%}
+<div class="container-fluid">
+
+        <h2> News </h2>
+        {% for view in article %}
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 article-card">
+            <img src = "{{view.image}}" class = "img-responsive" alt = "article">
+            <p class="text-center">
+                {{ view.content }}
+            </p>
+                <a href="{{view.url}}"> View more info </a>
+        </div>
+        
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+
+                <p class="ratings"> <cite> {{ view.author }}</cite> - <i>Published at: {{ view.date}} </i> </p>
+
+            </div>
+    </div>
+        {% endfor %}
+        
+	
+</div>
+    {% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

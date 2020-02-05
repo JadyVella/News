@@ -1,6 +1,7 @@
 from flask import render_template
 from app import app
-from .request import get_sources,get_article
+from .request import get_sources,get_articles
+from .models import source, article
 
 @app.route('/')
 def index():
@@ -14,17 +15,16 @@ def index():
     technology_source = get_sources('technology')
     sports_source = get_sources('sports')
     entertainment_source = get_sources('entertainment')
-    return render_template('index.html',message = message, title = title, technology = technology_source, sports = sports_source, entertainment = entertainment_source)
+    return render_template('index.html', title = title,source = source, technology = technology_source, sports = sports_source, entertainment = entertainment_source)
 
 
-@app.route('/news/<news_id>')
-def news(news_id):
+@app.route('/source/<id>')
+def article(id):
 
     '''
-    Display news page that displays the news details and its data
+    Display article page that displays the article details and its data
     '''
 
-    article = get_article(id)
-    title = f'{article.content}'
+    articles = get_articles(id)
 
-    return render_template('news.html',id = news_id, title = title, article = article)
+    return render_template('source.html', id = id, article = articles)

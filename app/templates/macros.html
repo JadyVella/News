@@ -2,7 +2,9 @@
 
     {% for source in source_list %}
         <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 article-card">
-            <img src="{{ source.title }}" alt="{{ source.title }}" class="img-responsive">
+            <h5 class="text-center">
+                {{ source.name }}
+            </h5>
             <li class="text-center">
                 <a href="/source/{{source.id}}">
                     {{ source.description}}</a>
