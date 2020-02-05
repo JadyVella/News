@@ -26,3 +26,6 @@ The person who created this application and designed it is Felix Ouma
 # Set Up Instruction
 To view this project, follow this link https://jadyvella.github.io/News/
 
+# Technologies
+
+
