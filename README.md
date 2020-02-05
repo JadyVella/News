@@ -30,3 +30,9 @@ To view this project, follow this link https://jadyvella.github.io/News/
 * Python3.7
 * Flask
 
+# Contact Information
+* Email : felixouma379@gmail.com
+* cell No.: +254792231660
+* Facebook: Jady Vella
+
+
