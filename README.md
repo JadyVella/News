@@ -19,3 +19,6 @@ THIS APPLICATION SHOULD ENABLE ONE TO:
 * See the image, description and the time a news article was created
 * Click an article and read the full article on the source website.
 
+
+# Author Information
+
