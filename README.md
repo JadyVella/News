@@ -21,4 +21,5 @@ THIS APPLICATION SHOULD ENABLE ONE TO:
 
 
 # Author Information
+The person who created this application and designed it is Felix Ouma
 
