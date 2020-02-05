@@ -1,5 +1,3 @@
-import os
-
 class Config:
     '''
     parent class for General configuration
@@ -11,13 +9,16 @@ class Config:
 
 
 class ProdConfig(Config):
+    '''
+    A child class for production configuration
+    '''
+
     pass
 
 
 class DevConfig(Config):
-    DEBUG = True
+    '''
+    A child class for Development configuration
+    '''
 
-config_options = {
-'development':DevConfig,
-'production':ProdConfig
-}
+    DEBUG = True
