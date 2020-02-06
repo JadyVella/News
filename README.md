@@ -24,7 +24,7 @@ THIS APPLICATION SHOULD ENABLE ONE TO:
 The person who created this application and designed it is Felix Ouma
 
 # Set Up Instruction
-To view this project, follow this link https://jadyvella.github.io/News/
+To view this project in heroku, follow this link https://fellohotnews.herokuapp.com/
 
 # Technologies
 * Python3.7
